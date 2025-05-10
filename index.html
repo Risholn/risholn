@@ -193,6 +193,59 @@
   </main>
 
   <script>
+
+    const filenameMap = {
+  "Älg": "Alg",
+  "Rådjur": "Radjur",
+  "Dovhjort": "Dovhjort",
+  "Kronhjort": "Kronhjort",
+  "Vildsvin": "Vildsvin",
+  "Björn": "Bjorn",
+  "Grävling": "Gravling",
+  "Iller": "Iller",
+  "Mink": "Mink",
+  "Mård": "Mard",
+  "Rödräv": "Rodrav",
+  "Vessla": "Vessla",
+  "Fälthare": "Falthare",
+  "Skogshare": "Skogshare",
+  "Vildkanin": "Vildkanin",
+  "Bläsand": "Blasand",
+  "Bläsgås": "Blasgas",
+  "Grågås": "Gragas",
+  "Gräsand": "Grasand",
+  "Knipa": "Knipa",
+  "Kricka": "Kricka",
+  "Sjöorre": "Sjoorre",
+  "Storskrake": "Storskrake",
+  "Sångsvan": "Sangsvan",
+  "Vigg": "Vigg",
+  "Vitkindad gås": "VitkindadGas",
+  "Korp": "Korp",
+  "Dalripa": "Dalripa",
+  "Fjällripa": "Fjallripa",
+  "Järpe": "Jarpe",
+  "Orre": "Orre",
+  "Tjäder": "Tjader",
+  "Björktrast": "Bjorktrast",
+  "Fiskmås": "Fiskmas",
+  "Gråtrut": "Gratrut",
+  "Havstrut": "Havstrut",
+  "Kaja": "Kaja",
+  "Kråka": "Kraka",
+  "Morkulla": "Morkulla",
+  "Nötskrika": "Notskrika",
+  "Rapphöna": "Rapphona",
+  "Ringduva": "Ringduva",
+  "Skata": "Skata",
+  "Storskarv": "Storskarv",
+  "Trana": "Trana",
+  "Fasan": "Fasan",
+  "Kanadagås": "Kanadagas",
+  "Bäver": "Baver"
+};
+
+
     const animals = {
       ungulatesGroup: ["Dovhjort", "Kronhjort", "Rådjur", "Vildsvin", "Älg"],
       predatorsGroup: ["Björn", "Grävling", "Iller", "Mink", "Mård", "Rödräv", "Vessla"],
@@ -232,7 +285,7 @@
         }
 
         div.innerHTML = `
-          <img src="/ikoner_vvo/${speciesName}.png" />
+          <img src="/ikoner_vvo/${filenameMap[speciesName] || speciesName}.png" />
           <div>${speciesName}</div>
           ${inputsHtml}
         `;
